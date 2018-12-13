@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-13T13:57:58.797Z</updated>
+  <updated>2018-12-13T14:05:50.561Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,18 +21,13 @@
     <link href="http://yoursite.com/2018/12/13/%E8%AE%BA-JavaScript%E3%80%81jQuery%E3%80%81AJAX%E3%80%81JSON%E5%8F%8A%E5%9B%9B%E8%80%85%E5%85%B3%E7%B3%BB/"/>
     <id>http://yoursite.com/2018/12/13/论-JavaScript、jQuery、AJAX、JSON及四者关系/</id>
     <published>2018-12-13T13:50:38.939Z</published>
-    <updated>2018-12-13T13:57:58.797Z</updated>
+    <updated>2018-12-13T14:05:50.561Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;  在学习前端的过程中，经常被各种各样的语法名词搞混，这里简单归纳下容易混淆的四种名词含义，JavaScript、jQuery、AJAX、JSON 以及这四者之间的关系。&lt;/p&gt;
-&lt;h2 id=&quot;JavaScript&quot;&gt;&lt;a href=&quot;#JavaScript&quot;
-        
-      
+      &lt;p&gt;  在学习前端的过程中，经常被各种各样的语法名词搞混，这里简单归纳下容易混淆的四种名词含义，JavaScript、jQuery、AJAX、JSON 以及这四者之间的关系。&lt;/p&gt;
+&lt;h2 id=&quot;JavaScript&quot;&gt;&lt;a href=&quot;#JavaScript&quot; class=&quot;headerlink&quot; title=&quot;JavaScript&quot;&gt;&lt;/a&gt;JavaScript&lt;/h2&gt;&lt;p&gt;JavaScript（简称js）是一种主要运行于浏览器中的&lt;strong&gt;弱类型的动态脚本语言&lt;/strong&gt;，可以用来实现网页上的一些高级功能，如数据验证处理、页面动态效果、定时任务、与用户交互、发送/接收服务器端数据等等。&lt;/p&gt;
+&lt;p&gt;弱类型指的是js中的变量在参与运算的时候可以根据实际需要动态转换类型。与之相对应的是强类型语言——变量一般不允许自动转换类型（某些强类型语言的字符串连接操作除外），如果参与运算、调用时不符合要求的类型，则会在编译阶段报错，比如说java各种复杂的变量声明。&lt;br&gt;
     
     </summary>
     
