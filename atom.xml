@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-11T07:55:53.569Z</updated>
+  <updated>2018-12-13T13:57:58.797Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>论-JavaScript、jQuery、AJAX、JSON及四者关系</title>
+    <link href="http://yoursite.com/2018/12/13/%E8%AE%BA-JavaScript%E3%80%81jQuery%E3%80%81AJAX%E3%80%81JSON%E5%8F%8A%E5%9B%9B%E8%80%85%E5%85%B3%E7%B3%BB/"/>
+    <id>http://yoursite.com/2018/12/13/论-JavaScript、jQuery、AJAX、JSON及四者关系/</id>
+    <published>2018-12-13T13:50:38.939Z</published>
+    <updated>2018-12-13T13:57:58.797Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;  在学习前端的过程中，经常被各种各样的语法名词搞混，这里简单归纳下容易混淆的四种名词含义，JavaScript、jQuery、AJAX、JSON 以及这四者之间的关系。&lt;/p&gt;
+&lt;h2 id=&quot;JavaScript&quot;&gt;&lt;a href=&quot;#JavaScript&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="web" scheme="http://yoursite.com/categories/web/"/>
+    
+    
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>刚开始的一小步</title>
