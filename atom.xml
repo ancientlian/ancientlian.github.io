@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-13T14:05:50.561Z</updated>
+  <updated>2018-12-19T14:59:37.325Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,33 +17,60 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>论-JavaScript、jQuery、AJAX、JSON及四者关系</title>
-    <link href="http://yoursite.com/2018/12/13/%E8%AE%BA-JavaScript%E3%80%81jQuery%E3%80%81AJAX%E3%80%81JSON%E5%8F%8A%E5%9B%9B%E8%80%85%E5%85%B3%E7%B3%BB/"/>
-    <id>http://yoursite.com/2018/12/13/论-JavaScript、jQuery、AJAX、JSON及四者关系/</id>
-    <published>2018-12-13T13:50:38.939Z</published>
-    <updated>2018-12-13T14:05:50.561Z</updated>
+    <title>图书小项目理解Django（二）</title>
+    <link href="http://yoursite.com/2018/12/18/%E5%9B%BE%E4%B9%A6%E5%B0%8F%E9%A1%B9%E7%9B%AE%E7%90%86%E8%A7%A3Django%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>http://yoursite.com/2018/12/18/图书小项目理解Django（二）/</id>
+    <published>2018-12-18T13:36:53.000Z</published>
+    <updated>2018-12-19T14:59:37.325Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;  在学习前端的过程中，经常被各种各样的语法名词搞混，这里简单归纳下容易混淆的四种名词含义，JavaScript、jQuery、AJAX、JSON 以及这四者之间的关系。&lt;/p&gt;
-&lt;h2 id=&quot;JavaScript&quot;&gt;&lt;a href=&quot;#JavaScript&quot; class=&quot;headerlink&quot; title=&quot;JavaScript&quot;&gt;&lt;/a&gt;JavaScript&lt;/h2&gt;&lt;p&gt;JavaScript（简称js）是一种主要运行于浏览器中的&lt;strong&gt;弱类型的动态脚本语言&lt;/strong&gt;，可以用来实现网页上的一些高级功能，如数据验证处理、页面动态效果、定时任务、与用户交互、发送/接收服务器端数据等等。&lt;/p&gt;
-&lt;p&gt;弱类型指的是js中的变量在参与运算的时候可以根据实际需要动态转换类型。与之相对应的是强类型语言——变量一般不允许自动转换类型（某些强类型语言的字符串连接操作除外），如果参与运算、调用时不符合要求的类型，则会在编译阶段报错，比如说java各种复杂的变量声明。&lt;br&gt;
+      &lt;p&gt;接上文：&lt;/p&gt;
+&lt;h2 id=&quot;信息展示页&quot;&gt;&lt;a href=&quot;#信息展示页&quot; class=&quot;headerlink&quot; title=&quot;信息展示页&quot;&gt;&lt;/a&gt;信息展示页&lt;/h2&gt;&lt;h3 id=&quot;设计url&quot;&gt;&lt;a href=&quot;#设计url&quot; class=&quot;headerlink&quot; title=&quot;设计url&quot;&gt;&lt;/a&gt;设计url&lt;/h3&gt;&lt;p&gt;在views里面：&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; django.shortcuts &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; render &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; booktest.models &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; BookInfo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(request)&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;&#39;&#39;显示图书信息&#39;&#39;&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;# 1. 查询出所有的图书信息&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    books = BookInfo.objects.all()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;# 2. 设置模板，使用模板&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; render(request , &lt;span class=&quot;string&quot;&gt;&#39;booktest/index.html&#39;&lt;/span&gt; , &amp;#123;&lt;span class=&quot;string&quot;&gt;&#39;books&#39;&lt;/span&gt;:books&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
-      <category term="web" scheme="http://yoursite.com/categories/web/"/>
+      <category term="django" scheme="http://yoursite.com/categories/django/"/>
     
     
-      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+      <category term="django" scheme="http://yoursite.com/tags/django/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>图书小项目理解Django（一）</title>
+    <link href="http://yoursite.com/2018/12/18/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E5%B0%8F%E9%A1%B9%E7%9B%AE%E7%90%86%E8%A7%A3django/"/>
+    <id>http://yoursite.com/2018/12/18/图书管理小项目理解django/</id>
+    <published>2018-12-18T13:36:53.000Z</published>
+    <updated>2018-12-19T14:54:56.403Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在Django项目中，我们会对扑面而来的众多框架内置生成文件望而生畏，这里通过一个简单的图书馆管理小例子来简单说明Django内置各部分的作用，便于快速理解Django&lt;/p&gt;
+&lt;h2 id=&quot;前期准备&quot;&gt;&lt;a href=&quot;#前期准备&quot; class=&quot;headerlink&quot; title=&quot;前期准备&quot;&gt;&lt;/a&gt;前期准备&lt;/h2&gt;&lt;p&gt;进入虚拟环境（&lt;a href=&quot;&quot;&gt;如何进入虚拟环境&lt;/a&gt;）    &lt;/p&gt;
+&lt;p&gt;终端输入：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;django-admin startproject bookM	#创建工程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd bookM	#进入到项目文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;python manage.py startapp booktest	#创建app&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="django" scheme="http://yoursite.com/categories/django/"/>
+    
+    
+      <category term="django" scheme="http://yoursite.com/tags/django/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>Redis基础认识</title>
-    <link href="http://yoursite.com/2018/12/10/Redis%E5%9F%BA%E7%A1%80%E8%AE%A4%E8%AF%86/"/>
-    <id>http://yoursite.com/2018/12/10/Redis基础认识/</id>
-    <published>2018-12-10T13:36:53.000Z</published>
-    <updated>2018-12-19T14:43:54.453Z</updated>
+    <link href="http://yoursite.com/2018/12/14/Redis%E5%9F%BA%E7%A1%80%E8%AE%A4%E8%AF%86/"/>
+    <id>http://yoursite.com/2018/12/14/Redis基础认识/</id>
+    <published>2018-12-14T13:36:53.000Z</published>
+    <updated>2018-12-19T14:55:52.820Z</updated>
     
     <summary type="html">
     
@@ -70,11 +97,33 @@
   </entry>
   
   <entry>
+    <title>论-JavaScript、jQuery、AJAX、JSON及四者关系</title>
+    <link href="http://yoursite.com/2018/12/13/%E8%AE%BA-JavaScript%E3%80%81jQuery%E3%80%81AJAX%E3%80%81JSON%E5%8F%8A%E5%9B%9B%E8%80%85%E5%85%B3%E7%B3%BB/"/>
+    <id>http://yoursite.com/2018/12/13/论-JavaScript、jQuery、AJAX、JSON及四者关系/</id>
+    <published>2018-12-13T13:50:38.939Z</published>
+    <updated>2018-12-13T14:05:50.561Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;  在学习前端的过程中，经常被各种各样的语法名词搞混，这里简单归纳下容易混淆的四种名词含义，JavaScript、jQuery、AJAX、JSON 以及这四者之间的关系。&lt;/p&gt;
+&lt;h2 id=&quot;JavaScript&quot;&gt;&lt;a href=&quot;#JavaScript&quot; class=&quot;headerlink&quot; title=&quot;JavaScript&quot;&gt;&lt;/a&gt;JavaScript&lt;/h2&gt;&lt;p&gt;JavaScript（简称js）是一种主要运行于浏览器中的&lt;strong&gt;弱类型的动态脚本语言&lt;/strong&gt;，可以用来实现网页上的一些高级功能，如数据验证处理、页面动态效果、定时任务、与用户交互、发送/接收服务器端数据等等。&lt;/p&gt;
+&lt;p&gt;弱类型指的是js中的变量在参与运算的时候可以根据实际需要动态转换类型。与之相对应的是强类型语言——变量一般不允许自动转换类型（某些强类型语言的字符串连接操作除外），如果参与运算、调用时不符合要求的类型，则会在编译阶段报错，比如说java各种复杂的变量声明。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="web" scheme="http://yoursite.com/categories/web/"/>
+    
+    
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
     <title>卸载win10预装</title>
-    <link href="http://yoursite.com/2018/01/13/%E7%AE%80%E5%8D%95%E5%AE%8C%E5%85%A8%E5%88%A0%E9%99%A4%E6%89%80%E6%9C%89win10%E9%A2%84%E8%A3%85%E5%BA%94%E7%94%A8/"/>
-    <id>http://yoursite.com/2018/01/13/简单完全删除所有win10预装应用/</id>
-    <published>2018-01-13T13:36:53.000Z</published>
-    <updated>2018-12-19T14:44:01.054Z</updated>
+    <link href="http://yoursite.com/2018/10/13/%E7%AE%80%E5%8D%95%E5%AE%8C%E5%85%A8%E5%88%A0%E9%99%A4%E6%89%80%E6%9C%89win10%E9%A2%84%E8%A3%85%E5%BA%94%E7%94%A8/"/>
+    <id>http://yoursite.com/2018/10/13/简单完全删除所有win10预装应用/</id>
+    <published>2018-10-13T13:36:53.000Z</published>
+    <updated>2018-12-19T14:56:08.853Z</updated>
     
     <summary type="html">
     
@@ -93,55 +142,6 @@
     
     
       <category term="win10" scheme="http://yoursite.com/tags/win10/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>图书小项目理解Django（二）</title>
-    <link href="http://yoursite.com/2017/12/18/%E5%9B%BE%E4%B9%A6%E5%B0%8F%E9%A1%B9%E7%9B%AE%E7%90%86%E8%A7%A3Django%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
-    <id>http://yoursite.com/2017/12/18/图书小项目理解Django（二）/</id>
-    <published>2017-12-18T13:36:53.000Z</published>
-    <updated>2018-12-19T14:51:43.961Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;接上文：&lt;/p&gt;
-&lt;h2 id=&quot;信息展示页&quot;&gt;&lt;a href=&quot;#信息展示页&quot; class=&quot;headerlink&quot; title=&quot;信息展示页&quot;&gt;&lt;/a&gt;信息展示页&lt;/h2&gt;&lt;h3 id=&quot;设计url&quot;&gt;&lt;a href=&quot;#设计url&quot; class=&quot;headerlink&quot; title=&quot;设计url&quot;&gt;&lt;/a&gt;设计url&lt;/h3&gt;&lt;p&gt;在views里面：&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; django.shortcuts &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; render &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; booktest.models &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; BookInfo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(request)&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;&#39;&#39;显示图书信息&#39;&#39;&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;# 1. 查询出所有的图书信息&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    books = BookInfo.objects.all()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;# 2. 设置模板，使用模板&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; render(request , &lt;span class=&quot;string&quot;&gt;&#39;booktest/index.html&#39;&lt;/span&gt; , &amp;#123;&lt;span class=&quot;string&quot;&gt;&#39;books&#39;&lt;/span&gt;:books&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="django" scheme="http://yoursite.com/categories/django/"/>
-    
-    
-      <category term="django" scheme="http://yoursite.com/tags/django/"/>
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>图书小项目理解Django（一）</title>
-    <link href="http://yoursite.com/2017/12/18/%E5%9B%BE%E4%B9%A6%E7%AE%A1%E7%90%86%E5%B0%8F%E9%A1%B9%E7%9B%AE%E7%90%86%E8%A7%A3django/"/>
-    <id>http://yoursite.com/2017/12/18/图书管理小项目理解django/</id>
-    <published>2017-12-18T13:36:53.000Z</published>
-    <updated>2018-12-19T14:51:51.877Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在Django项目中，我们会对扑面而来的众多框架内置生成文件望而生畏，这里通过一个简单的图书馆管理小例子来简单说明Django内置各部分的作用，便于快速理解Django&lt;/p&gt;
-&lt;h2 id=&quot;前期准备&quot;&gt;&lt;a href=&quot;#前期准备&quot; class=&quot;headerlink&quot; title=&quot;前期准备&quot;&gt;&lt;/a&gt;前期准备&lt;/h2&gt;&lt;p&gt;进入虚拟环境（&lt;a href=&quot;&quot;&gt;如何进入虚拟环境&lt;/a&gt;）    &lt;/p&gt;
-&lt;p&gt;终端输入：&lt;/p&gt;
-&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;django-admin startproject bookM	#创建工程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd bookM	#进入到项目文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;python manage.py startapp booktest	#创建app&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="django" scheme="http://yoursite.com/categories/django/"/>
-    
-    
-      <category term="django" scheme="http://yoursite.com/tags/django/"/>
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   

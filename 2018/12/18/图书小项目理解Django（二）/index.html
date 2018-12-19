@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="django,python,">
 
 
 
@@ -81,16 +81,18 @@
 
 
 
-<meta name="description" content="众所周知，这是一个博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ancientlian的博客">
-<meta property="og:url" content="http://yoursite.com/tags/win10/index.html">
+<meta name="description" content="接上文： 信息展示页设计url在views里面： 123456789from django.shortcuts import render from booktest.models import BookInfodef index(request):    &apos;&apos;&apos;显示图书信息&apos;&apos;&apos;    # 1. 查询出所有的图书信息    books = BookInfo.objects.all()    #">
+<meta name="keywords" content="django,python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="图书小项目理解Django（二）">
+<meta property="og:url" content="http://yoursite.com/2018/12/18/图书小项目理解Django（二）/index.html">
 <meta property="og:site_name" content="Ancientlian的博客">
-<meta property="og:description" content="众所周知，这是一个博客">
+<meta property="og:description" content="接上文： 信息展示页设计url在views里面： 123456789from django.shortcuts import render from booktest.models import BookInfodef index(request):    &apos;&apos;&apos;显示图书信息&apos;&apos;&apos;    # 1. 查询出所有的图书信息    books = BookInfo.objects.all()    #">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-19T14:59:37.325Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ancientlian的博客">
-<meta name="twitter:description" content="众所周知，这是一个博客">
+<meta name="twitter:title" content="图书小项目理解Django（二）">
+<meta name="twitter:description" content="接上文： 信息展示页设计url在views里面： 123456789from django.shortcuts import render from booktest.models import BookInfodef index(request):    &apos;&apos;&apos;显示图书信息&apos;&apos;&apos;    # 1. 查询出所有的图书信息    books = BookInfo.objects.all()    #">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/win10/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/18/图书小项目理解Django（二）/">
 
 
 
 
 
-  <title>Tag: win10 | Ancientlian的博客</title>
+  <title>图书小项目理解Django（二） | Ancientlian的博客</title>
   
 
 
@@ -145,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/ancientlian" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style></a>
 
@@ -282,52 +284,223 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>win10<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/18/图书小项目理解Django（二）/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ancientlian">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ancientlian的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/10/13/简单完全删除所有win10预装应用/" itemprop="url">
-              
-                <span itemprop="name">卸载win10预装</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">图书小项目理解Django（二）</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-10-13T21:36:53+08:00" content="2018-10-13">
-          10-13
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-18T21:36:53+08:00">
+                2018-12-18
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/django/" itemprop="url" rel="index">
+                    <span itemprop="name">django</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  625
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>接上文：</p>
+<h2 id="信息展示页"><a href="#信息展示页" class="headerlink" title="信息展示页"></a>信息展示页</h2><h3 id="设计url"><a href="#设计url" class="headerlink" title="设计url"></a>设计url</h3><p>在views里面：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render </span><br><span class="line"><span class="keyword">from</span> booktest.models <span class="keyword">import</span> BookInfo</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">(request)</span>:</span></span><br><span class="line">    <span class="string">'''显示图书信息'''</span></span><br><span class="line">    <span class="comment"># 1. 查询出所有的图书信息</span></span><br><span class="line">    books = BookInfo.objects.all()</span><br><span class="line">    <span class="comment"># 2. 设置模板，使用模板</span></span><br><span class="line">    <span class="keyword">return</span> render(request , <span class="string">'booktest/index.html'</span> , &#123;<span class="string">'books'</span>:books&#125;)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="模板的创建"><a href="#模板的创建" class="headerlink" title="模板的创建"></a>模板的创建</h3><p>新建空directory名为tempates</p>
+<p>在setting里的<strong>TEMPLATES</strong>处配置设定模板：<code>&#39;DIRS&#39;: [os.path.join(BASE_DIR,&#39;templates&#39;)],#设置模板目录</code></p>
+<p>新建app同名文件夹，内建index.html</p>
+<h3 id="配置urls"><a href="#配置urls" class="headerlink" title="配置urls"></a>配置urls</h3><p>在文件bookM内配置urls为：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">urlpatterns = [</span><br><span class="line">    url(<span class="string">r'^admin/'</span>, include(admin.site.urls)),</span><br><span class="line">    url(<span class="string">r'^'</span> , include(<span class="string">'booktest.urls'</span>)),   <span class="comment">#包含boottest的urls文件</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>在app文件（也就是booktest）内新建urls.py，其内容为：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.conf.urls <span class="keyword">import</span> url</span><br><span class="line"><span class="keyword">from</span> booktest <span class="keyword">import</span> views</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    url(<span class="string">r'^index$'</span> , views.index),  <span class="comment">#图书信息页面</span></span><br><span class="line">    url(<span class="string">r'^create$'</span> , views.create),<span class="comment">#图书新增</span></span><br><span class="line">    url(<span class="string">r'^delete(\d+)$'</span>,views.delete)<span class="comment">#图书删除</span></span><br><span class="line">    <span class="comment">#   （\d+）的含义：让django进行地址匹配的时候能作为参数传递给views视图</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<h3 id="设计html"><a href="#设计html" class="headerlink" title="设计html"></a>设计html</h3><p>编写index.html文件，内容为：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>图书信息<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/create"</span>&gt;</span>新增一本图书<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">&#123;#如果create不加前面的/,而url里面刚好又在后面加了/,例如：r'^index/$'，#&#125;</span><br><span class="line">&#123;#则会导致a标签访问的是http://127.0.0.1:8000/index/create，#&#125;</span><br><span class="line">&#123;#而不是我们想要的http://127.0.0.1:8000/create，这样就会产生页面不存在的访问错误#&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">    &#123;% for book in books %&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span>&#123;&#123; book.btitle &#125;&#125;----<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/delete&#123;&#123; book.id &#125;&#125;"</span>&gt;</span>删除<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    &#123;% endfor %&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="业务逻辑"><a href="#业务逻辑" class="headerlink" title="业务逻辑"></a>业务逻辑</h2><p>在views里编写业务逻辑</p>
+<h3 id="新增一本书："><a href="#新增一本书：" class="headerlink" title="新增一本书："></a>新增一本书：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create</span><span class="params">(request)</span>:</span></span><br><span class="line">    <span class="string">'''新增加一本图书'''</span></span><br><span class="line">    <span class="comment"># 1. 创建Bookinfo对象</span></span><br><span class="line">    b = BookInfo()</span><br><span class="line">    b.btitle = <span class="string">'流星蝴蝶剑'</span></span><br><span class="line">    b.bpub_date = date(<span class="number">1990</span>,<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">    <span class="comment"># 2. 保存进数据库</span></span><br><span class="line">    b.save()</span><br><span class="line">    <span class="comment"># 3. 返回应答，让浏览器返回首页，也就是再访问/index,重定向</span></span><br><span class="line">    <span class="comment">#页面重定向：服务器不返回页面，而是告诉浏览器再去请求别的url地址</span></span><br><span class="line">    <span class="comment">#return HttpResponse('添加成功okokokok!!')  #这里不是给浏览器返回一个内容</span></span><br><span class="line">    <span class="keyword">return</span>  HttpResponseRedirect(<span class="string">'/index'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="删除一本书："><a href="#删除一本书：" class="headerlink" title="删除一本书："></a>删除一本书：</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">delete</span><span class="params">(request , bid)</span>:</span></span><br><span class="line">    <span class="string">'''删除点击的图书'''</span></span><br><span class="line">    <span class="comment"># 1. 通过bid获取图书的对象</span></span><br><span class="line">    book = BookInfo.objects.get(id = bid)</span><br><span class="line">    <span class="comment"># 2. 删除</span></span><br><span class="line">    book.delete()</span><br><span class="line">    <span class="comment"># 3. 重定向，让浏览器重新访问/index</span></span><br><span class="line">    <span class="comment">#return HttpResponseRedirect('/index')</span></span><br><span class="line">    <span class="comment"># 上述函数可以简写为</span></span><br><span class="line">    <span class="keyword">return</span> redirect(<span class="string">'/index'</span>)</span><br></pre></td></tr></table></figure>
+<p>附views页全代码及效果展示</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/django/" rel="tag"># django</a>
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/18/图书管理小项目理解django/" rel="next" title="图书小项目理解Django（一）">
+                <i class="fa fa-chevron-left"></i> 图书小项目理解Django（一）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -335,6 +508,8 @@
 
 
           
+  
+
 
         </div>
         
@@ -355,8 +530,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -455,6 +639,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#信息展示页"><span class="nav-number">1.</span> <span class="nav-text">信息展示页</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#设计url"><span class="nav-number">1.1.</span> <span class="nav-text">设计url</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模板的创建"><span class="nav-number">1.2.</span> <span class="nav-text">模板的创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置urls"><span class="nav-number">1.3.</span> <span class="nav-text">配置urls</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设计html"><span class="nav-number">1.4.</span> <span class="nav-text">设计html</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#业务逻辑"><span class="nav-number">2.</span> <span class="nav-text">业务逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#新增一本书："><span class="nav-number">2.1.</span> <span class="nav-text">新增一本书：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除一本书："><span class="nav-number">2.2.</span> <span class="nav-text">删除一本书：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -623,6 +823,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 

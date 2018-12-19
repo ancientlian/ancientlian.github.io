@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="redis,">
 
 
 
@@ -81,16 +81,18 @@
 
 
 
-<meta name="description" content="众所周知，这是一个博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ancientlian的博客">
-<meta property="og:url" content="http://yoursite.com/tags/win10/index.html">
+<meta name="description" content="在学习的过程当中，我们或多或少的都会接触到redis，比如说在我们的web项目中，如果想添加历史浏览记录，那肯定要用到数据库，但如果直接上手mysql就显得的过于大材小用了，此时redis也就应运而生。不过首先需要介绍一下什么是nosql。 NoSQL介绍NoSQL：一类新出现的数据库（not only sql），特点有：  不支持sql语法 存储结构和传统关系型数据库（比如mysql，oracl">
+<meta name="keywords" content="redis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Redis基础认识">
+<meta property="og:url" content="http://yoursite.com/2018/12/14/Redis基础认识/index.html">
 <meta property="og:site_name" content="Ancientlian的博客">
-<meta property="og:description" content="众所周知，这是一个博客">
+<meta property="og:description" content="在学习的过程当中，我们或多或少的都会接触到redis，比如说在我们的web项目中，如果想添加历史浏览记录，那肯定要用到数据库，但如果直接上手mysql就显得的过于大材小用了，此时redis也就应运而生。不过首先需要介绍一下什么是nosql。 NoSQL介绍NoSQL：一类新出现的数据库（not only sql），特点有：  不支持sql语法 存储结构和传统关系型数据库（比如mysql，oracl">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-19T14:55:52.820Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ancientlian的博客">
-<meta name="twitter:description" content="众所周知，这是一个博客">
+<meta name="twitter:title" content="Redis基础认识">
+<meta name="twitter:description" content="在学习的过程当中，我们或多或少的都会接触到redis，比如说在我们的web项目中，如果想添加历史浏览记录，那肯定要用到数据库，但如果直接上手mysql就显得的过于大材小用了，此时redis也就应运而生。不过首先需要介绍一下什么是nosql。 NoSQL介绍NoSQL：一类新出现的数据库（not only sql），特点有：  不支持sql语法 存储结构和传统关系型数据库（比如mysql，oracl">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/win10/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/14/Redis基础认识/">
 
 
 
 
 
-  <title>Tag: win10 | Ancientlian的博客</title>
+  <title>Redis基础认识 | Ancientlian的博客</title>
   
 
 
@@ -145,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/ancientlian" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style></a>
 
@@ -282,52 +284,255 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>win10<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/14/Redis基础认识/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ancientlian">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ancientlian的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/10/13/简单完全删除所有win10预装应用/" itemprop="url">
-              
-                <span itemprop="name">卸载win10预装</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Redis基础认识</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-10-13T21:36:53+08:00" content="2018-10-13">
-          10-13
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-14T21:36:53+08:00">
+                2018-12-14
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/redis/" itemprop="url" rel="index">
+                    <span itemprop="name">redis</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  775
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在学习的过程当中，我们或多或少的都会接触到redis，比如说在我们的web项目中，如果想添加历史浏览记录，那肯定要用到数据库，但如果直接上手mysql就显得的过于大材小用了，此时redis也就应运而生。不过首先需要介绍一下什么是nosql。</p>
+<h2 id="NoSQL介绍"><a href="#NoSQL介绍" class="headerlink" title="NoSQL介绍"></a>NoSQL介绍</h2><p><strong>NoSQL：一类新出现的数据库（not only sql），特点有：</strong></p>
+<ul>
+<li><strong>不支持sql语法</strong></li>
+<li>存储结构和传统关系型数据库（比如mysql，oracle，sql server）中的关系表不同，nosql中存储的数据都是<strong>K-V</strong>形式。而Redis 就是一个高性能的key-value数据库。</li>
+<li>NoSQL的世界里没有一种通用的语言，每种NoSQL数据库都有自己的api和语法，以及擅长的业务场景</li>
+<li>NoSQL产品种类比如有：</li>
+<li><ul>
+<li>Mongodb</li>
+<li>Redis</li>
+<li>Hbase hadoop</li>
+<li>Cassandra hadoop<a id="more"></a>
+<strong>NoSQL和SQL数据库比较：</strong></li>
+</ul>
+</li>
+<li><p>适用场景不同：sql数据库适合用于关系特别复杂的数据查询场景，nosql相反</p>
+</li>
+<li>“事务”特性的支持：sql对事务的支持非常完善，而nosql基本不支持事务。（注：<strong>“事务”</strong>：一组sql操作，要么都成功，要么都失败）</li>
+<li>两者在不断地取长补短，呈现融合趋势</li>
+</ul>
+<h2 id="Redis简介"><a href="#Redis简介" class="headerlink" title="Redis简介"></a>Redis简介</h2><ul>
+<li>Redis是一个开源的使用ANSI <a href="https://baike.baidu.com/item/C%E8%AF%AD%E8%A8%80" target="_blank" rel="noopener">C语言</a>编写、支持网络、可基于内存亦可持久化的日志型、Key-Value<a href="https://baike.baidu.com/item/%E6%95%B0%E6%8D%AE%E5%BA%93/103728" target="_blank" rel="noopener">数据库</a>，并提供多种语言的API。从2010年3月15日起，Redis的开发工作由VMware主持。从2013年5月开始，Redis的开发由Pivotal赞助。</li>
+<li>Redis是一个key-value<a href="https://baike.baidu.com/item/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F" target="_blank" rel="noopener">存储系统</a>。和Memcached类似，它支持存储的value类型相对更多，包括<strong>string(字符串)、list(<a href="https://baike.baidu.com/item/%E9%93%BE%E8%A1%A8" target="_blank" rel="noopener">链表</a>)、set(集合)、zset(sorted set –有序集合)和hash（哈希类型）</strong>。（来源：百度词条）</li>
+</ul>
+<h2 id="Redis特性"><a href="#Redis特性" class="headerlink" title="Redis特性"></a>Redis特性</h2><ul>
+<li>与其他key-value缓存产品一样：支持数据的持久化，可以将内存中的数据保存在磁盘中，重启的时候可以再次加载进行使用。</li>
+<li>同时提供list,set,zset,hash等数据结构的存储。</li>
+<li>支持数据的<strong>备份</strong>，即master-slave模式的数据备份</li>
+</ul>
+<h2 id="Redis-优势"><a href="#Redis-优势" class="headerlink" title="Redis 优势"></a>Redis 优势</h2><ul>
+<li>性能极高 - Redis能读的速度是110000次/s，写的速度为81000次/s。</li>
+<li>丰富的数据类型 - 支持<strong>二进制案例</strong>的 String，Lists，Hashes，Sets 及 Orderd Sets 数据类型操作。</li>
+<li>原子 - Redis的所有操作都是原子性的，同时Redis还支持对几个操作全并后的原子性执行。</li>
+<li>丰富的特性 – Redis还支持 publish/subscribe, 通知, key 过期等等特性。</li>
+</ul>
+<h2 id="Redis应用场景"><a href="#Redis应用场景" class="headerlink" title="Redis应用场景"></a>Redis应用场景</h2><ul>
+<li>用来做<strong>缓存</strong>（ehcache/memcached）–redis的所有数据是放在内存中的（内存数据库）</li>
+<li>可以在某些特定应用场景下替代传统数据库 – 比如社交应用</li>
+<li>在一些大型系统，特定功能：session共享，购物车</li>
+<li>也有比如排行榜应用，取TOP N操作。</li>
+<li>按照用户投票和时间排序等等。</li>
+<li>只要你有丰富的想象力，redis有无限的惊喜</li>
+</ul>
+<h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><ul>
+<li><a href="https://redis.io/" target="_blank" rel="noopener">redis官方网站</a></li>
+<li><a href="http://www.redis.cn/" target="_blank" rel="noopener">redis中文官网</a></li>
+</ul>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/redis/" rel="tag"># redis</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/13/论-JavaScript、jQuery、AJAX、JSON及四者关系/" rel="next" title="论-JavaScript、jQuery、AJAX、JSON及四者关系">
+                <i class="fa fa-chevron-left"></i> 论-JavaScript、jQuery、AJAX、JSON及四者关系
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/18/图书管理小项目理解django/" rel="prev" title="图书小项目理解Django（一）">
+                图书小项目理解Django（一） <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -335,6 +540,8 @@
 
 
           
+  
+
 
         </div>
         
@@ -355,8 +562,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -455,6 +671,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#NoSQL介绍"><span class="nav-number">1.</span> <span class="nav-text">NoSQL介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis简介"><span class="nav-number">2.</span> <span class="nav-text">Redis简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis特性"><span class="nav-number">3.</span> <span class="nav-text">Redis特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis-优势"><span class="nav-number">4.</span> <span class="nav-text">Redis 优势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis应用场景"><span class="nav-number">5.</span> <span class="nav-text">Redis应用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐阅读"><span class="nav-number">6.</span> <span class="nav-text">推荐阅读</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -623,6 +855,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
