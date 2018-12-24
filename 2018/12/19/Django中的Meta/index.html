@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="django,python,">
 
 
 
@@ -81,16 +81,18 @@
 
 
 
-<meta name="description" content="众所周知，这是一个博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ancientlian的博客">
-<meta property="og:url" content="http://yoursite.com/categories/电脑技巧/index.html">
+<meta name="description" content="在Django模型类中经常会嵌套一个内部类，他的名字为Meta，它一般用于定义一些Django模型类的行为特性。也就是通过一个内嵌类 “class Meta” 给你的 model 定义元数据。 定义方式为：12345class Foo(models.Model):     example = models.CharField(maxlength=10)    class Meta:">
+<meta name="keywords" content="django,python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Django中的Meta">
+<meta property="og:url" content="http://yoursite.com/2018/12/19/Django中的Meta/index.html">
 <meta property="og:site_name" content="Ancientlian的博客">
-<meta property="og:description" content="众所周知，这是一个博客">
+<meta property="og:description" content="在Django模型类中经常会嵌套一个内部类，他的名字为Meta，它一般用于定义一些Django模型类的行为特性。也就是通过一个内嵌类 “class Meta” 给你的 model 定义元数据。 定义方式为：12345class Foo(models.Model):     example = models.CharField(maxlength=10)    class Meta:">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-24T14:32:11.341Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ancientlian的博客">
-<meta name="twitter:description" content="众所周知，这是一个博客">
+<meta name="twitter:title" content="Django中的Meta">
+<meta name="twitter:description" content="在Django模型类中经常会嵌套一个内部类，他的名字为Meta，它一般用于定义一些Django模型类的行为特性。也就是通过一个内嵌类 “class Meta” 给你的 model 定义元数据。 定义方式为：12345class Foo(models.Model):     example = models.CharField(maxlength=10)    class Meta:">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/电脑技巧/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/19/Django中的Meta/">
 
 
 
 
 
-  <title>Category: 电脑技巧 | Ancientlian的博客</title>
+  <title>Django中的Meta | Ancientlian的博客</title>
   
 
 
@@ -145,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/ancientlian" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style></a>
 
@@ -282,53 +284,230 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>电脑技巧<small>Category</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/19/Django中的Meta/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ancientlian">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ancientlian的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/10/13/简单完全删除所有win10预装应用/" itemprop="url">
-              
-                <span itemprop="name">卸载win10预装</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Django中的Meta</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-10-13T21:36:53+08:00" content="2018-10-13">
-          10-13
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-19T22:36:53+08:00">
+                2018-12-19
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/django/" itemprop="url" rel="index">
+                    <span itemprop="name">django</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  991
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在Django模型类中经常会嵌套一个内部类，他的名字为Meta，它一般用于定义一些Django模型类的行为特性。也就是通过一个内嵌类 “class Meta” 给你的 model 定义元数据。</p>
+<h2 id="定义方式为："><a href="#定义方式为：" class="headerlink" title="定义方式为："></a>定义方式为：</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span><span class="params">(models.Model)</span>:</span> </span><br><span class="line">    example = models.CharField(maxlength=<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span> </span><br><span class="line">        <span class="comment"># 各种行为模式 #</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><h3 id="abstract"><a href="#abstract" class="headerlink" title="abstract"></a>abstract</h3><p>这个属性是定义当前的模型是不是一个<strong>抽象类</strong>。所谓抽象类是不会对应数据库表的。一般我们用它来归纳一些公共属性字段，然后继承它的子类可以继承这些字段。</p>
+<p>Options.abstract<br>如果 <code>abstract = True</code> 这个model就是一个抽象类</p>
+<h3 id="app-label"><a href="#app-label" class="headerlink" title="app_label"></a>app_label</h3><p>这个属性用于当你的模型不在默认的应用程序包下的models.py文件中，需要重新指定你这个模型所属应用程序。</p>
+<p>Options.app_label<br>如果一个model定义在默认的models.py，例如如果你的app的models在另一个myapp.models子模块下，你必须定义app_label让Django知道它属于哪一个app<br><code>app_label = &#39;myapp&#39;</code></p>
+<h3 id="db-table"><a href="#db-table" class="headerlink" title="db_table"></a>db_table</h3><p>db_table是<strong>指定自定义数据库表名</strong>。Django有一套默认的按照一定规则生成数据模型对应的数据库表。<br>Options.db_table<br>定义该model在数据库中的表名称：<br>　　<code>db_table = &#39;Students&#39;</code><br>默认的命名方式为app_label + ‘_’ + module_name 作为表名</p>
+<h3 id="db-teblespace"><a href="#db-teblespace" class="headerlink" title="db_teblespace"></a>db_teblespace</h3><p>Options.db_teblespace<br>定义这个model所使用的数据库表空间比如Oracle。你可以通过db_tablespace来指定这个模型对应的数据库表放在哪个数据库表空间。在项目的settings中定义。</p>
+<h3 id="get-latest-by"><a href="#get-latest-by" class="headerlink" title="get_latest_by"></a>get_latest_by</h3><p>Options.get_latest_by<br>在model中指定Manager上的lastest（）管理方法按照DateField或者DateTimeField类型的字段进行选取，默认使用指定字段来排序</p>
+<h3 id="managed"><a href="#managed" class="headerlink" title="managed"></a>managed</h3><p>Options.managed<br>默认值为True，这意味着Django可以使用syncdb和reset等命令来创建或移除对应的数据库。默认值为True,如果你不希望这么做，可以把manage的值设置为False</p>
+<h3 id="order-with-respect-to"><a href="#order-with-respect-to" class="headerlink" title="order_with_respect_to"></a>order_with_respect_to</h3><p>这个属性一般用于多对多的关系中，它指向一个关联对象，就是说关联对象找到这个对象后它是经过排序的。指定这个属性后你会得到一个get_xxx_order()和set_xxx_order()的方法，通过它们你可以设置或者回去排序的对象</p>
+<h3 id="ordering"><a href="#ordering" class="headerlink" title="ordering"></a>ordering</h3><p>这个属性是告诉Django模型对象返回的记录结果集是按照哪个字段<strong>排序</strong>的。这是一个字符串的元组或列表，没有一个字符串都是一个字段和用一个可选的表明降序的’-‘构成。当字段名前面没有’-‘时，将<strong>默认使用升序</strong>排列。使用’?’将会随机排列</p>
+<ul>
+<li>ordering=[‘order_date’]     # 按订单升序排列</li>
+<li>ordering=[‘-order_date’]     # 按订单降序排列，-表示降序</li>
+<li>ordering=[‘?order_date’]     # 随机排序，？表示随机</li>
+<li>ordering=[‘-pub_date’,’author’]     # 以pub_date为降序，在以author升序排列</li>
+</ul>
+<h3 id="permissions"><a href="#permissions" class="headerlink" title="permissions"></a>permissions</h3><p>permissions主要是为了在Django Admin管理模块下使用的，如果你设置了这个属性可以让指定的方法权限描述更清晰可读。Django自动为每个设置了admin的对象创建添加，删除和修改的权限。<br><code>permissions = ((&#39;can_deliver_pizzas&#39;,&#39;Can deliver pizzas&#39;))</code></p>
+<h3 id="proxy"><a href="#proxy" class="headerlink" title="proxy"></a>proxy</h3><p>这是为了实现<strong>代理模型</strong>使用的，如果proxy = True,表示model是其父的代理 model </p>
+<h3 id="unique-together"><a href="#unique-together" class="headerlink" title="unique_together"></a>unique_together</h3><p>unique_together这个属性用于：当你需要通过两个字段保持唯一性时使用。比如假设你希望，一个Person的FirstName和LastName两者的组合必须是唯一的，那么可以这样设置：<br><code>unique_together = ((&quot;first_name&quot;, &quot;last_name&quot;),)</code><br>一个ManyToManyField不能包含在unique_together中。如果你需要验证关联到ManyToManyField字段的唯一验证，尝试使用signal(信号)或者明确指定through属性。</p>
+<h3 id="verbose-name"><a href="#verbose-name" class="headerlink" title="verbose_name"></a>verbose_name</h3><p>verbose_name的用于给你的模型类起一个更可读的名字，一般定义为中文，例如：<br><code>verbose_name = &quot;学校&quot;</code></p>
+<h3 id="verbose-name-plural"><a href="#verbose-name-plural" class="headerlink" title="verbose_name_plural"></a>verbose_name_plural</h3><p>这个属性是指定模型的复数形式，比如：<br><code>verbose_name_plural = &quot;学校&quot;</code><br>如果不指定Django会自动在模型名称后加一个’s’</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/django/" rel="tag"># django</a>
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/19/Django配置redis/" rel="next" title="Django配置redis">
+                <i class="fa fa-chevron-left"></i> Django配置redis
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -336,6 +515,8 @@
 
 
           
+  
+
 
         </div>
         
@@ -356,8 +537,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -468,6 +658,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义方式为："><span class="nav-number">1.</span> <span class="nav-text">定义方式为：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性"><span class="nav-number">2.</span> <span class="nav-text">属性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#abstract"><span class="nav-number">2.1.</span> <span class="nav-text">abstract</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#app-label"><span class="nav-number">2.2.</span> <span class="nav-text">app_label</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#db-table"><span class="nav-number">2.3.</span> <span class="nav-text">db_table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#db-teblespace"><span class="nav-number">2.4.</span> <span class="nav-text">db_teblespace</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#get-latest-by"><span class="nav-number">2.5.</span> <span class="nav-text">get_latest_by</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#managed"><span class="nav-number">2.6.</span> <span class="nav-text">managed</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#order-with-respect-to"><span class="nav-number">2.7.</span> <span class="nav-text">order_with_respect_to</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ordering"><span class="nav-number">2.8.</span> <span class="nav-text">ordering</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#permissions"><span class="nav-number">2.9.</span> <span class="nav-text">permissions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#proxy"><span class="nav-number">2.10.</span> <span class="nav-text">proxy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#unique-together"><span class="nav-number">2.11.</span> <span class="nav-text">unique_together</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#verbose-name"><span class="nav-number">2.12.</span> <span class="nav-text">verbose_name</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#verbose-name-plural"><span class="nav-number">2.13.</span> <span class="nav-text">verbose_name_plural</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -636,6 +842,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 

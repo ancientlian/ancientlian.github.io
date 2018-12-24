@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="mysql,">
 
 
 
@@ -81,16 +81,18 @@
 
 
 
-<meta name="description" content="众所周知，这是一个博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ancientlian的博客">
-<meta property="og:url" content="http://yoursite.com/categories/电脑技巧/index.html">
+<meta name="description" content="进入mysql界面，进行用户的基本相关操作 查看当前有的账户名称mysql&amp;gt; SELECT DISTINCT CONCAT(&amp;#39;User: &amp;#39;&amp;#39;&amp;#39;,user,&amp;#39;&amp;#39;&amp;#39;@&amp;#39;&amp;#39;&amp;#39;,host,&amp;#39;&amp;#39;&amp;#39;;&amp;#39;) AS query FROM mysql.user;  或者直接：select user">
+<meta name="keywords" content="mysql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql数据库用户以及权限">
+<meta property="og:url" content="http://yoursite.com/2018/12/19/mysql数据库用户以及权限/index.html">
 <meta property="og:site_name" content="Ancientlian的博客">
-<meta property="og:description" content="众所周知，这是一个博客">
+<meta property="og:description" content="进入mysql界面，进行用户的基本相关操作 查看当前有的账户名称mysql&amp;gt; SELECT DISTINCT CONCAT(&amp;#39;User: &amp;#39;&amp;#39;&amp;#39;,user,&amp;#39;&amp;#39;&amp;#39;@&amp;#39;&amp;#39;&amp;#39;,host,&amp;#39;&amp;#39;&amp;#39;;&amp;#39;) AS query FROM mysql.user;  或者直接：select user">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-24T14:36:23.861Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ancientlian的博客">
-<meta name="twitter:description" content="众所周知，这是一个博客">
+<meta name="twitter:title" content="mysql数据库用户以及权限">
+<meta name="twitter:description" content="进入mysql界面，进行用户的基本相关操作 查看当前有的账户名称mysql&amp;gt; SELECT DISTINCT CONCAT(&amp;#39;User: &amp;#39;&amp;#39;&amp;#39;,user,&amp;#39;&amp;#39;&amp;#39;@&amp;#39;&amp;#39;&amp;#39;,host,&amp;#39;&amp;#39;&amp;#39;;&amp;#39;) AS query FROM mysql.user;  或者直接：select user">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/电脑技巧/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/19/mysql数据库用户以及权限/">
 
 
 
 
 
-  <title>Category: 电脑技巧 | Ancientlian的博客</title>
+  <title>mysql数据库用户以及权限 | Ancientlian的博客</title>
   
 
 
@@ -145,7 +147,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/ancientlian" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style></a>
 
@@ -282,53 +284,242 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>电脑技巧<small>Category</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/19/mysql数据库用户以及权限/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ancientlian">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/header.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ancientlian的博客">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/10/13/简单完全删除所有win10预装应用/" itemprop="url">
-              
-                <span itemprop="name">卸载win10预装</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">mysql数据库用户以及权限</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-10-13T21:36:53+08:00" content="2018-10-13">
-          10-13
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-19T22:36:53+08:00">
+                2018-12-19
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/mysql/" itemprop="url" rel="index">
+                    <span itemprop="name">mysql</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  801
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>进入mysql界面，进行用户的基本相关操作</p>
+<h2 id="查看当前有的账户名称"><a href="#查看当前有的账户名称" class="headerlink" title="查看当前有的账户名称"></a>查看当前有的账户名称</h2><p><code>mysql&gt; SELECT DISTINCT CONCAT(&#39;User: &#39;&#39;&#39;,user,&#39;&#39;&#39;@&#39;&#39;&#39;,host,&#39;&#39;&#39;;&#39;) AS query FROM mysql.user;</code> </p>
+<p>或者直接：<code>select user,host from mysql.user;</code></p>
+<h2 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h2><a id="more"></a>
+<p>通用命令为：<br><code>CREATE USER &#39;username&#39;@&#39;host&#39; IDENTIFIED BY &#39;password&#39;;</code></p>
+<p>Or命令2：<br>当数据库存在用户的时候GRANT会对用户进行授权，但当数据库不存在该用户的时候，就会创建相应的用户并进行授权。（说明上面那步是多余的，并且他创建之后还要赋权限才能使用=.=!）<br><code>GRANT &lt;privileges&gt; ON username IDENTIFIED BY &#39;password&#39;&lt;WITH GRANT OPTION&gt;;</code></p>
+<p>说明：</p>
+<ul>
+<li>username：创建的用户名</li>
+<li>host：指定用户可以在哪个主机登录。<strong>本地用户用’localhost’，从任意远程主机登录，用通配符‘%’</strong></li>
+<li>password：该用户的登陆密码，密码可以为空，如果为空则该用户可以不需要密码登陆服务器</li>
+</ul>
+<h2 id="授权"><a href="#授权" class="headerlink" title="授权"></a>授权</h2><p>命令1：<br><code>GRANT privileges ON databasename.tablename TO &#39;username&#39;@&#39;host&#39;</code></p>
+<p>说明：</p>
+<ul>
+<li><p>privileges：用户的操作权限，如<code>SELECT</code>，<code>INSERT</code>，<code>UPDATE</code>等，如果要授予所的权限则使用<code>ALL</code></p>
+</li>
+<li><p>用这种命令授权的用户不能给其它用户授权，如果想让该用户可以授权，用以下命令:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GRANT privileges ON databasename.tablename TO &apos;username&apos;@&apos;host&apos; WITH GRANT OPTION;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="撤销用户权限"><a href="#撤销用户权限" class="headerlink" title="撤销用户权限"></a>撤销用户权限</h2><p>命令：<br><code>REVOKE privilege ON databasename.tablename FROM &#39;username&#39;@&#39;host&#39;;</code></p>
+<p><strong>注意：</strong>假如你在给用户<code>&#39;name&#39;@&#39;%&#39;</code>授权的时候是这样的（或类似的）：<code>GRANT SELECT ON test.user TO &#39;name&#39;@&#39;%&#39;</code>，则在使用<code>REVOKE SELECT ON *.* FROM &#39;name&#39;@&#39;%&#39;;</code>命令并不能撤销该用户对test数据库中user表的<code>SELECT</code> 操作。<strong>相反</strong>，如果授权使用的是<code>GRANT SELECT ON *.* TO &#39;name&#39;@&#39;%&#39;;</code>则<code>REVOKE SELECT ON test.user FROM &#39;name&#39;@&#39;%&#39;;</code>命令也<strong>不能</strong>撤销该用户对test数据库中user表的<code>Select</code>权限。</p>
+<h2 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h2><p>命令：<code>DROP USER &#39;username&#39;@&#39;host&#39;;</code></p>
+<p>也可以是：<code>Delete FROM user Where User=&#39;username&#39; and Host=&#39;host&#39;;</code></p>
+<p>如果就修改当前用户的密码，可以直接：<code>SET PASSWORD = PASSWORD(&quot;newpassword&quot;);</code></p>
+<h2 id="修改用户密码"><a href="#修改用户密码" class="headerlink" title="修改用户密码"></a>修改用户密码</h2><p>命令：<code>update mysql.user set password=password(&#39;new_password&#39;) where User=&quot;username&quot; and Host=&quot;host&quot;;</code></p>
+<p>也可以是：<code>SET PASSWORD FOR &#39;username&#39;@&#39;host&#39; = PASSWORD(&#39;newpassword&#39;);</code></p>
+<h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>如果授权和删除之后没有显示，可以用<code>flush privileges;</code>刷新一下系统权限表</p>
+<h2 id="附：数据库-数据表-数据列权限："><a href="#附：数据库-数据表-数据列权限：" class="headerlink" title="附：数据库/数据表/数据列权限："></a>附：数据库/数据表/数据列权限：</h2><p>Alter: 修改已存在的数据表(例如增加/删除列)和索引。<br>Create: 建立新的数据库或数据表。<br>Delete: 删除表的记录。<br>Drop: 删除数据表或数据库。<br>INDEX: 建立或删除索引。<br>Insert: 增加表的记录。<br>Select: 显示/搜索表的记录。<br>Update: 修改表中已存在的记录。</p>
+<p>全局管理MySQL用户权限：</p>
+<p>file: 在MySQL服务器上读写文件。<br>PROCESS: 显示或杀死属于其它用户的服务线程。<br>RELOAD: 重载访问控制表，刷新日志等。<br>SHUTDOWN: 关闭MySQL服务。</p>
+<p>特别的权限：</p>
+<p>ALL: 允许做任何事(和root一样)。<br>USAGE: 只允许登录–其它什么也不允许做。</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/mysql/" rel="tag"># mysql</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/19/Django中配置mysql/" rel="next" title="Django配置mysql">
+                <i class="fa fa-chevron-left"></i> Django配置mysql
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/19/Django配置redis/" rel="prev" title="Django配置redis">
+                Django配置redis <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -336,6 +527,8 @@
 
 
           
+  
+
 
         </div>
         
@@ -356,8 +549,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -468,6 +670,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#查看当前有的账户名称"><span class="nav-number">1.</span> <span class="nav-text">查看当前有的账户名称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建用户"><span class="nav-number">2.</span> <span class="nav-text">创建用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#授权"><span class="nav-number">3.</span> <span class="nav-text">授权</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#撤销用户权限"><span class="nav-number">4.</span> <span class="nav-text">撤销用户权限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除用户"><span class="nav-number">5.</span> <span class="nav-text">删除用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改用户密码"><span class="nav-number">6.</span> <span class="nav-text">修改用户密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#备注"><span class="nav-number">7.</span> <span class="nav-text">备注</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附：数据库-数据表-数据列权限："><span class="nav-number">8.</span> <span class="nav-text">附：数据库/数据表/数据列权限：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -636,6 +854,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 

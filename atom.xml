@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-19T15:15:14.073Z</updated>
+  <updated>2018-12-24T14:32:11.341Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,105 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Django中的Meta</title>
+    <link href="http://yoursite.com/2018/12/19/Django%E4%B8%AD%E7%9A%84Meta/"/>
+    <id>http://yoursite.com/2018/12/19/Django中的Meta/</id>
+    <published>2018-12-19T14:36:53.000Z</published>
+    <updated>2018-12-24T14:32:11.341Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在Django模型类中经常会嵌套一个内部类，他的名字为Meta，它一般用于定义一些Django模型类的行为特性。也就是通过一个内嵌类 “class Meta” 给你的 model 定义元数据。&lt;/p&gt;
+&lt;h2 id=&quot;定义方式为：&quot;&gt;&lt;a href=&quot;#定义方式为：&quot; class=&quot;headerlink&quot; title=&quot;定义方式为：&quot;&gt;&lt;/a&gt;定义方式为：&lt;/h2&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(models.Model)&lt;/span&gt;:&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    example = models.CharField(maxlength=&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Meta&lt;/span&gt;:&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;# 各种行为模式 #&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="django" scheme="http://yoursite.com/categories/django/"/>
+    
+    
+      <category term="django" scheme="http://yoursite.com/tags/django/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Django配置redis</title>
+    <link href="http://yoursite.com/2018/12/19/Django%E9%85%8D%E7%BD%AEredis/"/>
+    <id>http://yoursite.com/2018/12/19/Django配置redis/</id>
+    <published>2018-12-19T14:36:53.000Z</published>
+    <updated>2018-12-24T14:35:38.514Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在django 中配置redis的连接&lt;/p&gt;
+&lt;h2 id=&quot;linux安装&quot;&gt;&lt;a href=&quot;#linux安装&quot; class=&quot;headerlink&quot; title=&quot;linux安装&quot;&gt;&lt;/a&gt;linux安装&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ pip install django-redis&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;安装完成显示：&lt;code&gt;Successfully installed django-redis-4.10.0 redis-3.0.1&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;settings配置&quot;&gt;&lt;a href=&quot;#settings配置&quot; class=&quot;headerlink&quot; title=&quot;settings配置&quot;&gt;&lt;/a&gt;settings配置&lt;/h2&gt;&lt;p&gt;settings里面的配置为：&lt;br&gt;
+    
+    </summary>
+    
+      <category term="django" scheme="http://yoursite.com/categories/django/"/>
+    
+    
+      <category term="django" scheme="http://yoursite.com/tags/django/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="redis" scheme="http://yoursite.com/tags/redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql数据库用户以及权限</title>
+    <link href="http://yoursite.com/2018/12/19/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%A8%E6%88%B7%E4%BB%A5%E5%8F%8A%E6%9D%83%E9%99%90/"/>
+    <id>http://yoursite.com/2018/12/19/mysql数据库用户以及权限/</id>
+    <published>2018-12-19T14:36:53.000Z</published>
+    <updated>2018-12-24T14:36:23.861Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;进入mysql界面，进行用户的基本相关操作&lt;/p&gt;
+&lt;h2 id=&quot;查看当前有的账户名称&quot;&gt;&lt;a href=&quot;#查看当前有的账户名称&quot; class=&quot;headerlink&quot; title=&quot;查看当前有的账户名称&quot;&gt;&lt;/a&gt;查看当前有的账户名称&lt;/h2&gt;&lt;p&gt;&lt;code&gt;mysql&amp;gt; SELECT DISTINCT CONCAT(&amp;#39;User: &amp;#39;&amp;#39;&amp;#39;,user,&amp;#39;&amp;#39;&amp;#39;@&amp;#39;&amp;#39;&amp;#39;,host,&amp;#39;&amp;#39;&amp;#39;;&amp;#39;) AS query FROM mysql.user;&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;或者直接：&lt;code&gt;select user,host from mysql.user;&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;创建用户&quot;&gt;&lt;a href=&quot;#创建用户&quot; class=&quot;headerlink&quot; title=&quot;创建用户&quot;&gt;&lt;/a&gt;创建用户&lt;/h2&gt;
+    
+    </summary>
+    
+      <category term="mysql" scheme="http://yoursite.com/categories/mysql/"/>
+    
+    
+      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Django配置mysql</title>
+    <link href="http://yoursite.com/2018/12/19/Django%E4%B8%AD%E9%85%8D%E7%BD%AEmysql/"/>
+    <id>http://yoursite.com/2018/12/19/Django中配置mysql/</id>
+    <published>2018-12-19T14:36:53.000Z</published>
+    <updated>2018-12-24T14:35:11.865Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;首先装好mysql数据库，django框架里面默认用的是sqlite的数据库&lt;/p&gt;
+&lt;h2 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot; title=&quot;配置&quot;&gt;&lt;/a&gt;配置&lt;/h2&gt;&lt;p&gt;在项目文件夹的settings.py中配置：&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;DATABASES = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;default&#39;&lt;/span&gt;: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;# &#39;ENGINE&#39;: &#39;django.db.backends.sqlite3&#39;,&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;# &#39;NAME&#39;: os.path.join(BASE_DIR, &#39;db.sqlite3&#39;),&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&#39;ENGINE&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;django.db.backends.mysql&#39;&lt;/span&gt;,   &lt;span class=&quot;comment&quot;&gt;# 数据库引擎&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&#39;NAME&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;tablename&#39;&lt;/span&gt;,         &lt;span class=&quot;comment&quot;&gt;# 你要存储数据的库名，事先要创建之&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&#39;USER&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;root&#39;&lt;/span&gt;,         &lt;span class=&quot;comment&quot;&gt;# 数据库用户名&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&#39;PASSWORD&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;mysql&#39;&lt;/span&gt;,     &lt;span class=&quot;comment&quot;&gt;# 密码&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;#&#39;HOST&#39;: &#39;localhost&#39;,    # 主机&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&#39;HOST&#39;&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&#39;127.0.0.1&#39;&lt;/span&gt;, &lt;span class=&quot;comment&quot;&gt;# 制定mysql数据库所在电脑ip，如果是本机直接写‘localhost’&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&#39;PORT&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;3306&#39;&lt;/span&gt;,         &lt;span class=&quot;comment&quot;&gt;# 数据库使用的端口&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="django" scheme="http://yoursite.com/categories/django/"/>
+    
+    
+      <category term="django" scheme="http://yoursite.com/tags/django/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
+    
+  </entry>
   
   <entry>
     <title>图书小项目理解Django（二）</title>

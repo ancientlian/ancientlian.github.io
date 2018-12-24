@@ -3,6 +3,108 @@
   
     
     <entry>
+      <title>Django中的Meta</title>
+      <link href="/2018/12/19/Django%E4%B8%AD%E7%9A%84Meta/"/>
+      <url>/2018/12/19/Django%E4%B8%AD%E7%9A%84Meta/</url>
+      
+        <content type="html"><![CDATA[<p>在Django模型类中经常会嵌套一个内部类，他的名字为Meta，它一般用于定义一些Django模型类的行为特性。也就是通过一个内嵌类 “class Meta” 给你的 model 定义元数据。</p><h2 id="定义方式为："><a href="#定义方式为：" class="headerlink" title="定义方式为："></a>定义方式为：</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span><span class="params">(models.Model)</span>:</span> </span><br><span class="line">    example = models.CharField(maxlength=<span class="number">10</span>)</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Meta</span>:</span> </span><br><span class="line">        <span class="comment"># 各种行为模式 #</span></span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><h3 id="abstract"><a href="#abstract" class="headerlink" title="abstract"></a>abstract</h3><p>这个属性是定义当前的模型是不是一个<strong>抽象类</strong>。所谓抽象类是不会对应数据库表的。一般我们用它来归纳一些公共属性字段，然后继承它的子类可以继承这些字段。</p><p>Options.abstract<br>如果 <code>abstract = True</code> 这个model就是一个抽象类</p><h3 id="app-label"><a href="#app-label" class="headerlink" title="app_label"></a>app_label</h3><p>这个属性用于当你的模型不在默认的应用程序包下的models.py文件中，需要重新指定你这个模型所属应用程序。</p><p>Options.app_label<br>如果一个model定义在默认的models.py，例如如果你的app的models在另一个myapp.models子模块下，你必须定义app_label让Django知道它属于哪一个app<br><code>app_label = &#39;myapp&#39;</code></p><h3 id="db-table"><a href="#db-table" class="headerlink" title="db_table"></a>db_table</h3><p>db_table是<strong>指定自定义数据库表名</strong>。Django有一套默认的按照一定规则生成数据模型对应的数据库表。<br>Options.db_table<br>定义该model在数据库中的表名称：<br>　　<code>db_table = &#39;Students&#39;</code><br>默认的命名方式为app_label + ‘_’ + module_name 作为表名</p><h3 id="db-teblespace"><a href="#db-teblespace" class="headerlink" title="db_teblespace"></a>db_teblespace</h3><p>Options.db_teblespace<br>定义这个model所使用的数据库表空间比如Oracle。你可以通过db_tablespace来指定这个模型对应的数据库表放在哪个数据库表空间。在项目的settings中定义。</p><h3 id="get-latest-by"><a href="#get-latest-by" class="headerlink" title="get_latest_by"></a>get_latest_by</h3><p>Options.get_latest_by<br>在model中指定Manager上的lastest（）管理方法按照DateField或者DateTimeField类型的字段进行选取，默认使用指定字段来排序</p><h3 id="managed"><a href="#managed" class="headerlink" title="managed"></a>managed</h3><p>Options.managed<br>默认值为True，这意味着Django可以使用syncdb和reset等命令来创建或移除对应的数据库。默认值为True,如果你不希望这么做，可以把manage的值设置为False</p><h3 id="order-with-respect-to"><a href="#order-with-respect-to" class="headerlink" title="order_with_respect_to"></a>order_with_respect_to</h3><p>这个属性一般用于多对多的关系中，它指向一个关联对象，就是说关联对象找到这个对象后它是经过排序的。指定这个属性后你会得到一个get_xxx_order()和set_xxx_order()的方法，通过它们你可以设置或者回去排序的对象</p><h3 id="ordering"><a href="#ordering" class="headerlink" title="ordering"></a>ordering</h3><p>这个属性是告诉Django模型对象返回的记录结果集是按照哪个字段<strong>排序</strong>的。这是一个字符串的元组或列表，没有一个字符串都是一个字段和用一个可选的表明降序的’-‘构成。当字段名前面没有’-‘时，将<strong>默认使用升序</strong>排列。使用’?’将会随机排列</p><ul><li>ordering=[‘order_date’]     # 按订单升序排列</li><li>ordering=[‘-order_date’]     # 按订单降序排列，-表示降序</li><li>ordering=[‘?order_date’]     # 随机排序，？表示随机</li><li>ordering=[‘-pub_date’,’author’]     # 以pub_date为降序，在以author升序排列</li></ul><h3 id="permissions"><a href="#permissions" class="headerlink" title="permissions"></a>permissions</h3><p>permissions主要是为了在Django Admin管理模块下使用的，如果你设置了这个属性可以让指定的方法权限描述更清晰可读。Django自动为每个设置了admin的对象创建添加，删除和修改的权限。<br><code>permissions = ((&#39;can_deliver_pizzas&#39;,&#39;Can deliver pizzas&#39;))</code></p><h3 id="proxy"><a href="#proxy" class="headerlink" title="proxy"></a>proxy</h3><p>这是为了实现<strong>代理模型</strong>使用的，如果proxy = True,表示model是其父的代理 model </p><h3 id="unique-together"><a href="#unique-together" class="headerlink" title="unique_together"></a>unique_together</h3><p>unique_together这个属性用于：当你需要通过两个字段保持唯一性时使用。比如假设你希望，一个Person的FirstName和LastName两者的组合必须是唯一的，那么可以这样设置：<br><code>unique_together = ((&quot;first_name&quot;, &quot;last_name&quot;),)</code><br>一个ManyToManyField不能包含在unique_together中。如果你需要验证关联到ManyToManyField字段的唯一验证，尝试使用signal(信号)或者明确指定through属性。</p><h3 id="verbose-name"><a href="#verbose-name" class="headerlink" title="verbose_name"></a>verbose_name</h3><p>verbose_name的用于给你的模型类起一个更可读的名字，一般定义为中文，例如：<br><code>verbose_name = &quot;学校&quot;</code></p><h3 id="verbose-name-plural"><a href="#verbose-name-plural" class="headerlink" title="verbose_name_plural"></a>verbose_name_plural</h3><p>这个属性是指定模型的复数形式，比如：<br><code>verbose_name_plural = &quot;学校&quot;</code><br>如果不指定Django会自动在模型名称后加一个’s’</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> django </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> django </tag>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Django配置redis</title>
+      <link href="/2018/12/19/Django%E9%85%8D%E7%BD%AEredis/"/>
+      <url>/2018/12/19/Django%E9%85%8D%E7%BD%AEredis/</url>
+      
+        <content type="html"><![CDATA[<p>在django 中配置redis的连接</p><h2 id="linux安装"><a href="#linux安装" class="headerlink" title="linux安装"></a>linux安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install django-redis</span><br></pre></td></tr></table></figure><p>安装完成显示：<code>Successfully installed django-redis-4.10.0 redis-3.0.1</code></p><h2 id="settings配置"><a href="#settings配置" class="headerlink" title="settings配置"></a>settings配置</h2><p>settings里面的配置为：<br><a id="more"></a><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># redis配置</span></span><br><span class="line">CACHES = &#123;</span><br><span class="line">    <span class="string">'default'</span>: &#123;</span><br><span class="line">        <span class="string">'BACKEND'</span>: <span class="string">'django_redis.cache.RedisCache'</span>,</span><br><span class="line">        <span class="string">'LOCATION'</span>: <span class="string">'redis://127.0.0.1:6379/5'</span>,</span><br><span class="line">        <span class="string">"OPTIONS"</span>: &#123;</span><br><span class="line">            <span class="string">"CLIENT_CLASS"</span>: <span class="string">"django_redis.client.DefaultClient"</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">'session'</span>:&#123;</span><br><span class="line">        <span class="string">'BACKEND'</span>: <span class="string">'django_redis.cache.RedisCache'</span>,</span><br><span class="line">        <span class="string">'LOCATION'</span>: <span class="string">'redis://127.0.0.1:6379/6'</span>,</span><br><span class="line">        <span class="string">"OPTIONS"</span>: &#123;</span><br><span class="line">            <span class="string">"CLIENT_CLASS"</span>: <span class="string">"django_redis.client.DefaultClient"</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><p>这里注意的是我们get_redis_connection的方法默认使用的是default里面定义的数据库</p><p>我们看get_redis_connection的方法定义就明白了：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_redis_connection</span><span class="params">(alias=<span class="string">'default'</span>, write=True)</span>:</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">    Helper used for obtaining a raw redis client.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">from</span> django.core.cache <span class="keyword">import</span> caches</span><br><span class="line"></span><br><span class="line">    cache = caches[alias]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> hasattr(cache, <span class="string">"client"</span>):</span><br><span class="line">        <span class="keyword">raise</span> NotImplementedError(<span class="string">"This backend does not support this feature"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> hasattr(cache.client, <span class="string">"get_client"</span>):</span><br><span class="line">        <span class="keyword">raise</span> NotImplementedError(<span class="string">"This backend does not support this feature"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> cache.client.get_client(write)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> django </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> django </tag>
+            
+            <tag> python </tag>
+            
+            <tag> redis </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>mysql数据库用户以及权限</title>
+      <link href="/2018/12/19/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%A8%E6%88%B7%E4%BB%A5%E5%8F%8A%E6%9D%83%E9%99%90/"/>
+      <url>/2018/12/19/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%A8%E6%88%B7%E4%BB%A5%E5%8F%8A%E6%9D%83%E9%99%90/</url>
+      
+        <content type="html"><![CDATA[<p>进入mysql界面，进行用户的基本相关操作</p><h2 id="查看当前有的账户名称"><a href="#查看当前有的账户名称" class="headerlink" title="查看当前有的账户名称"></a>查看当前有的账户名称</h2><p><code>mysql&gt; SELECT DISTINCT CONCAT(&#39;User: &#39;&#39;&#39;,user,&#39;&#39;&#39;@&#39;&#39;&#39;,host,&#39;&#39;&#39;;&#39;) AS query FROM mysql.user;</code> </p><p>或者直接：<code>select user,host from mysql.user;</code></p><h2 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h2><a id="more"></a><p>通用命令为：<br><code>CREATE USER &#39;username&#39;@&#39;host&#39; IDENTIFIED BY &#39;password&#39;;</code></p><p>Or命令2：<br>当数据库存在用户的时候GRANT会对用户进行授权，但当数据库不存在该用户的时候，就会创建相应的用户并进行授权。（说明上面那步是多余的，并且他创建之后还要赋权限才能使用=.=!）<br><code>GRANT &lt;privileges&gt; ON username IDENTIFIED BY &#39;password&#39;&lt;WITH GRANT OPTION&gt;;</code></p><p>说明：</p><ul><li>username：创建的用户名</li><li>host：指定用户可以在哪个主机登录。<strong>本地用户用’localhost’，从任意远程主机登录，用通配符‘%’</strong></li><li>password：该用户的登陆密码，密码可以为空，如果为空则该用户可以不需要密码登陆服务器</li></ul><h2 id="授权"><a href="#授权" class="headerlink" title="授权"></a>授权</h2><p>命令1：<br><code>GRANT privileges ON databasename.tablename TO &#39;username&#39;@&#39;host&#39;</code></p><p>说明：</p><ul><li><p>privileges：用户的操作权限，如<code>SELECT</code>，<code>INSERT</code>，<code>UPDATE</code>等，如果要授予所的权限则使用<code>ALL</code></p></li><li><p>用这种命令授权的用户不能给其它用户授权，如果想让该用户可以授权，用以下命令:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GRANT privileges ON databasename.tablename TO &apos;username&apos;@&apos;host&apos; WITH GRANT OPTION;</span><br></pre></td></tr></table></figure></li></ul><h2 id="撤销用户权限"><a href="#撤销用户权限" class="headerlink" title="撤销用户权限"></a>撤销用户权限</h2><p>命令：<br><code>REVOKE privilege ON databasename.tablename FROM &#39;username&#39;@&#39;host&#39;;</code></p><p><strong>注意：</strong>假如你在给用户<code>&#39;name&#39;@&#39;%&#39;</code>授权的时候是这样的（或类似的）：<code>GRANT SELECT ON test.user TO &#39;name&#39;@&#39;%&#39;</code>，则在使用<code>REVOKE SELECT ON *.* FROM &#39;name&#39;@&#39;%&#39;;</code>命令并不能撤销该用户对test数据库中user表的<code>SELECT</code> 操作。<strong>相反</strong>，如果授权使用的是<code>GRANT SELECT ON *.* TO &#39;name&#39;@&#39;%&#39;;</code>则<code>REVOKE SELECT ON test.user FROM &#39;name&#39;@&#39;%&#39;;</code>命令也<strong>不能</strong>撤销该用户对test数据库中user表的<code>Select</code>权限。</p><h2 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a>删除用户</h2><p>命令：<code>DROP USER &#39;username&#39;@&#39;host&#39;;</code></p><p>也可以是：<code>Delete FROM user Where User=&#39;username&#39; and Host=&#39;host&#39;;</code></p><p>如果就修改当前用户的密码，可以直接：<code>SET PASSWORD = PASSWORD(&quot;newpassword&quot;);</code></p><h2 id="修改用户密码"><a href="#修改用户密码" class="headerlink" title="修改用户密码"></a>修改用户密码</h2><p>命令：<code>update mysql.user set password=password(&#39;new_password&#39;) where User=&quot;username&quot; and Host=&quot;host&quot;;</code></p><p>也可以是：<code>SET PASSWORD FOR &#39;username&#39;@&#39;host&#39; = PASSWORD(&#39;newpassword&#39;);</code></p><h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>如果授权和删除之后没有显示，可以用<code>flush privileges;</code>刷新一下系统权限表</p><h2 id="附：数据库-数据表-数据列权限："><a href="#附：数据库-数据表-数据列权限：" class="headerlink" title="附：数据库/数据表/数据列权限："></a>附：数据库/数据表/数据列权限：</h2><p>Alter: 修改已存在的数据表(例如增加/删除列)和索引。<br>Create: 建立新的数据库或数据表。<br>Delete: 删除表的记录。<br>Drop: 删除数据表或数据库。<br>INDEX: 建立或删除索引。<br>Insert: 增加表的记录。<br>Select: 显示/搜索表的记录。<br>Update: 修改表中已存在的记录。</p><p>全局管理MySQL用户权限：</p><p>file: 在MySQL服务器上读写文件。<br>PROCESS: 显示或杀死属于其它用户的服务线程。<br>RELOAD: 重载访问控制表，刷新日志等。<br>SHUTDOWN: 关闭MySQL服务。</p><p>特别的权限：</p><p>ALL: 允许做任何事(和root一样)。<br>USAGE: 只允许登录–其它什么也不允许做。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> mysql </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>Django配置mysql</title>
+      <link href="/2018/12/19/Django%E4%B8%AD%E9%85%8D%E7%BD%AEmysql/"/>
+      <url>/2018/12/19/Django%E4%B8%AD%E9%85%8D%E7%BD%AEmysql/</url>
+      
+        <content type="html"><![CDATA[<p>首先装好mysql数据库，django框架里面默认用的是sqlite的数据库</p><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>在项目文件夹的settings.py中配置：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">DATABASES = &#123;</span><br><span class="line">    <span class="string">'default'</span>: &#123;</span><br><span class="line">        <span class="comment"># 'ENGINE': 'django.db.backends.sqlite3',</span></span><br><span class="line">        <span class="comment"># 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),</span></span><br><span class="line">        <span class="string">'ENGINE'</span>: <span class="string">'django.db.backends.mysql'</span>,   <span class="comment"># 数据库引擎</span></span><br><span class="line">        <span class="string">'NAME'</span>: <span class="string">'tablename'</span>,         <span class="comment"># 你要存储数据的库名，事先要创建之</span></span><br><span class="line">        <span class="string">'USER'</span>: <span class="string">'root'</span>,         <span class="comment"># 数据库用户名</span></span><br><span class="line">        <span class="string">'PASSWORD'</span>: <span class="string">'mysql'</span>,     <span class="comment"># 密码</span></span><br><span class="line">        <span class="comment">#'HOST': 'localhost',    # 主机</span></span><br><span class="line">        <span class="string">'HOST'</span>:<span class="string">'127.0.0.1'</span>, <span class="comment"># 制定mysql数据库所在电脑ip，如果是本机直接写‘localhost’</span></span><br><span class="line">        <span class="string">'PORT'</span>: <span class="string">'3306'</span>,         <span class="comment"># 数据库使用的端口</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="数据库的迁移"><a href="#数据库的迁移" class="headerlink" title="数据库的迁移"></a>数据库的迁移</h2><p>仅仅在settings里面配置好数据库的端口连接是还不够的，我们还需在几个步骤：</p><p>首先：在python的虚拟环境中需要<strong>安装pymysql</strong>，命令为<code>pip install pymysql</code><br>（注：python2使用<code>pip install mysql-python</code> 来安装mysql-python</p><p>然后在项目文件夹下的-init-.py里面导入添加</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line">pymysql.install_as_MySQLdb()</span><br></pre></td></tr></table></figure><p>之后就能在终端中进行数据库的迁移了：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python manage.py makemigrations</span><br><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure><p>这样就简单完成了mysql数据库的配置了。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> django </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> django </tag>
+            
+            <tag> python </tag>
+            
+            <tag> mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>图书小项目理解Django（二）</title>
       <link href="/2018/12/18/%E5%9B%BE%E4%B9%A6%E5%B0%8F%E9%A1%B9%E7%9B%AE%E7%90%86%E8%A7%A3Django%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
       <url>/2018/12/18/%E5%9B%BE%E4%B9%A6%E5%B0%8F%E9%A1%B9%E7%9B%AE%E7%90%86%E8%A7%A3Django%EF%BC%88%E4%BA%8C%EF%BC%89/</url>
