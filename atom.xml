@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ancientlian的博客</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-11-14T14:25:58.553Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Ancientlian</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python中的字典、列表及元组简单认识</title>
+    <link href="http://yoursite.com/2019/11/14/Python%E4%B8%AD%E7%9A%84%E5%AD%97%E5%85%B8%E3%80%81%E5%88%97%E8%A1%A8%E5%8F%8A%E5%85%83%E7%BB%84%E7%AE%80%E5%8D%95%E8%AE%A4%E8%AF%86/"/>
+    <id>http://yoursite.com/2019/11/14/Python中的字典、列表及元组简单认识/</id>
+    <published>2019-11-14T14:36:53.000Z</published>
+    <updated>2019-11-14T14:25:58.553Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文主要简单介绍Python当中字典（Dictionary）、列表（List）以及元组（Tuple）的基础知识。&lt;/p&gt;
+&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;在我们的python中有一些特有的内置数据类型，其中包括有dictionary（字典）、tuple（元组）、list（列表）。&lt;/p&gt;
+&lt;h2 id=&quot;Dictionary&quot;&gt;&lt;a href=&quot;#Dictionary&quot; class=&quot;headerlink&quot; title=&quot;Dictionary&quot;&gt;&lt;/a&gt;Dictionary&lt;/h2&gt;&lt;p&gt;Python的内置数据类型之一，定义了&lt;strong&gt;键值&lt;/strong&gt;之间一对一的关系。&lt;/p&gt;
+&lt;h3 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h3&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;d = &amp;#123;&lt;span class=&quot;string&quot;&gt;&quot;test1&quot;&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&quot;test1&quot;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&quot;test2&quot;&lt;/span&gt;:&lt;span class=&quot;number&quot;&gt;111&lt;/span&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt;&amp;gt;&amp;gt;d[&lt;span class=&quot;string&quot;&gt;&quot;test2&quot;&lt;/span&gt;]	&lt;span class=&quot;comment&quot;&gt;#引用方法&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;span class=&quot;number&quot;&gt;111&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;每一个元素都是一个key-value对，整个元素集合用{}括起来。&lt;strong&gt;不允许使用值获取key。&lt;/strong&gt;&lt;br&gt;dictionary的值可以&lt;strong&gt;混用&lt;/strong&gt;，包括字符串、整数、对象、甚至是dictionary。但是key会严格一点。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Python基础" scheme="http://yoursite.com/categories/Python%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>重新部署</title>
+    <link href="http://yoursite.com/2019/11/13/%E5%A6%82%E4%BD%95%E6%8D%A2%E6%96%B0%E7%9A%84%E7%94%B5%E8%84%91%E8%AE%BE%E7%BD%AEhexo/"/>
+    <id>http://yoursite.com/2019/11/13/如何换新的电脑设置hexo/</id>
+    <published>2019-11-13T14:41:45.000Z</published>
+    <updated>2019-11-13T14:50:11.830Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Django中的Meta</title>
+    <link href="http://yoursite.com/2018/12/19/Django%E4%B8%AD%E7%9A%84Meta/"/>
+    <id>http://yoursite.com/2018/12/19/Django中的Meta/</id>
+    <published>2018-12-19T14:36:53.000Z</published>
+    <updated>2018-12-24T14:32:12.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在Django模型类中经常会嵌套一个内部类，他的名字为Meta，它一般用于定义一些Django模型类的行为特性。也就是通过一个内嵌类 “class Meta” 给你的 model 定义元数据。&lt;/p&gt;
+&lt;h2 id=&quot;定义方式为：&quot;&gt;&lt;a href=&quot;#定义方式为：&quot; class=&quot;headerlink&quot; title=&quot;定义方式为：&quot;&gt;&lt;/a&gt;定义方式为：&lt;/h2&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(models.Model)&lt;/span&gt;:&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    example = models.CharField(maxlength=&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Meta&lt;/span&gt;:&lt;/span&gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;# 各种行为模式 #&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="django" scheme="http://yoursite.com/categories/django/"/>
+    
+    
+      <category term="django" scheme="http://yoursite.com/tags/django/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Django配置mysql</title>
+    <link href="http://yoursite.com/2018/12/19/Django%E4%B8%AD%E9%85%8D%E7%BD%AEmysql/"/>
+    <id>http://yoursite.com/2018/12/19/Django中配置mysql/</id>
+    <published>2018-12-19T14:36:53.000Z</published>
+    <updated>2018-12-24T14:35:12.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;首先装好mysql数据库，django框架里面默认用的是sqlite的数据库&lt;/p&gt;
+&lt;h2 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot; class=&quot;headerlink&quot; title=&quot;配置&quot;&gt;&lt;/a&gt;配置&lt;/h2&gt;&lt;p&gt;在项目文件夹的settings.py中配置：&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;DATABASES = &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;default&#39;&lt;/span&gt;: &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;# &#39;ENGINE&#39;: &#39;django.db.backends.sqlite3&#39;,&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;# &#39;NAME&#39;: os.path.join(BASE_DIR, &#39;db.sqlite3&#39;),&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&#39;ENGINE&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;django.db.backends.mysql&#39;&lt;/span&gt;,   &lt;span class=&quot;comment&quot;&gt;# 数据库引擎&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&#39;NAME&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;tablename&#39;&lt;/span&gt;,         &lt;span class=&quot;comment&quot;&gt;# 你要存储数据的库名，事先要创建之&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&#39;USER&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;root&#39;&lt;/span&gt;,         &lt;span class=&quot;comment&quot;&gt;# 数据库用户名&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&#39;PASSWORD&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;mysql&#39;&lt;/span&gt;,     &lt;span class=&quot;comment&quot;&gt;# 密码&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;comment&quot;&gt;#&#39;HOST&#39;: &#39;localhost&#39;,    # 主机&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&#39;HOST&#39;&lt;/span&gt;:&lt;span class=&quot;string&quot;&gt;&#39;127.0.0.1&#39;&lt;/span&gt;, &lt;span class=&quot;comment&quot;&gt;# 制定mysql数据库所在电脑ip，如果是本机直接写‘localhost’&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;string&quot;&gt;&#39;PORT&#39;&lt;/span&gt;: &lt;span class=&quot;string&quot;&gt;&#39;3306&#39;&lt;/span&gt;,         &lt;span class=&quot;comment&quot;&gt;# 数据库使用的端口&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="django" scheme="http://yoursite.com/categories/django/"/>
+    
+    
+      <category term="django" scheme="http://yoursite.com/tags/django/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Django配置redis</title>
+    <link href="http://yoursite.com/2018/12/19/Django%E9%85%8D%E7%BD%AEredis/"/>
+    <id>http://yoursite.com/2018/12/19/Django配置redis/</id>
+    <published>2018-12-19T14:36:53.000Z</published>
+    <updated>2018-12-24T14:35:40.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在django 中配置redis的连接&lt;/p&gt;
+&lt;h2 id=&quot;linux安装&quot;&gt;&lt;a href=&quot;#linux安装&quot; class=&quot;headerlink&quot; title=&quot;linux安装&quot;&gt;&lt;/a&gt;linux安装&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ pip install django-redis&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;安装完成显示：&lt;code&gt;Successfully installed django-redis-4.10.0 redis-3.0.1&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;settings配置&quot;&gt;&lt;a href=&quot;#settings配置&quot; class=&quot;headerlink&quot; title=&quot;settings配置&quot;&gt;&lt;/a&gt;settings配置&lt;/h2&gt;&lt;p&gt;settings里面的配置为：&lt;br&gt;
+    
+    </summary>
+    
+      <category term="django" scheme="http://yoursite.com/categories/django/"/>
+    
+    
+      <category term="django" scheme="http://yoursite.com/tags/django/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="redis" scheme="http://yoursite.com/tags/redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql数据库用户以及权限</title>
+    <link href="http://yoursite.com/2018/12/19/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%94%A8%E6%88%B7%E4%BB%A5%E5%8F%8A%E6%9D%83%E9%99%90/"/>
+    <id>http://yoursite.com/2018/12/19/mysql数据库用户以及权限/</id>
+    <published>2018-12-19T14:36:53.000Z</published>
+    <updated>2018-12-24T14:36:24.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;进入mysql界面，进行用户的基本相关操作&lt;/p&gt;
+&lt;h2 id=&quot;查看当前有的账户名称&quot;&gt;&lt;a href=&quot;#查看当前有的账户名称&quot; class=&quot;headerlink&quot; title=&quot;查看当前有的账户名称&quot;&gt;&lt;/a&gt;查看当前有的账户名称&lt;/h2&gt;&lt;p&gt;&lt;code&gt;mysql&amp;gt; SELECT DISTINCT CONCAT(&amp;#39;User: &amp;#39;&amp;#39;&amp;#39;,user,&amp;#39;&amp;#39;&amp;#39;@&amp;#39;&amp;#39;&amp;#39;,host,&amp;#39;&amp;#39;&amp;#39;;&amp;#39;) AS query FROM mysql.user;&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;或者直接：&lt;code&gt;select user,host from mysql.user;&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&quot;创建用户&quot;&gt;&lt;a href=&quot;#创建用户&quot; class=&quot;headerlink&quot; title=&quot;创建用户&quot;&gt;&lt;/a&gt;创建用户&lt;/h2&gt;
+    
+    </summary>
+    
+      <category term="mysql" scheme="http://yoursite.com/categories/mysql/"/>
+    
+    
+      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>图书小项目理解Django（二）</title>
+    <link href="http://yoursite.com/2018/12/18/%E5%9B%BE%E4%B9%A6%E5%B0%8F%E9%A1%B9%E7%9B%AE%E7%90%86%E8%A7%A3Django%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>http://yoursite.com/2018/12/18/图书小项目理解Django（二）/</id>
+    <published>2018-12-18T14:36:53.000Z</published>
+    <updated>2018-12-19T15:15:16.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;接上文：&lt;/p&gt;
+&lt;h2 id=&quot;信息展示页&quot;&gt;&lt;a href=&quot;#信息展示页&quot; class=&quot;headerlink&quot; title=&quot;信息展示页&quot;&gt;&lt;/a&gt;信息展示页&lt;/h2&gt;&lt;h3 id=&quot;设计url&quot;&gt;&lt;a href=&quot;#设计url&quot; class=&quot;headerlink&quot; title=&quot;设计url&quot;&gt;&lt;/a&gt;设计url&lt;/h3&gt;&lt;p&gt;在views里面：&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; django.shortcuts &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; render &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; booktest.models &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; BookInfo&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(request)&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;string&quot;&gt;&#39;&#39;&#39;显示图书信息&#39;&#39;&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;# 1. 查询出所有的图书信息&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    books = BookInfo.objects.all()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;# 2. 设置模板，使用模板&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; render(request , &lt;span class=&quot;string&quot;&gt;&#39;booktest/index.html&#39;&lt;/span&gt; , &amp;#123;&lt;span class=&quot;string&quot;&gt;&#39;books&#39;&lt;/span&gt;:books&amp;#125;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="django" scheme="http://yoursite.com/categories/django/"/>
+    
+    
+      <category term="django" scheme="http://yoursite.com/tags/django/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>图书小项目理解Django（一）</title>
+    <link href="http://yoursite.com/2018/12/18/%E5%9B%BE%E4%B9%A6%E5%B0%8F%E9%A1%B9%E7%9B%AE%E7%90%86%E8%A7%A3Django%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>http://yoursite.com/2018/12/18/图书小项目理解Django（一）/</id>
+    <published>2018-12-18T13:36:53.000Z</published>
+    <updated>2018-12-19T14:54:58.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在Django项目中，我们会对扑面而来的众多框架内置生成文件望而生畏，这里通过一个简单的图书馆管理小例子来简单说明Django内置各部分的作用，便于快速理解Django&lt;/p&gt;
+&lt;h2 id=&quot;前期准备&quot;&gt;&lt;a href=&quot;#前期准备&quot; class=&quot;headerlink&quot; title=&quot;前期准备&quot;&gt;&lt;/a&gt;前期准备&lt;/h2&gt;&lt;p&gt;进入虚拟环境（&lt;a href&gt;如何进入虚拟环境&lt;/a&gt;）    &lt;/p&gt;
+&lt;p&gt;终端输入：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;django-admin startproject bookM	#创建工程&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cd bookM	#进入到项目文件&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;python manage.py startapp booktest	#创建app&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="django" scheme="http://yoursite.com/categories/django/"/>
+    
+    
+      <category term="django" scheme="http://yoursite.com/tags/django/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis基础认识</title>
+    <link href="http://yoursite.com/2018/12/14/Redis%E5%9F%BA%E7%A1%80%E8%AE%A4%E8%AF%86/"/>
+    <id>http://yoursite.com/2018/12/14/Redis基础认识/</id>
+    <published>2018-12-14T13:36:53.000Z</published>
+    <updated>2018-12-19T14:55:54.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在学习的过程当中，我们或多或少的都会接触到redis，比如说在我们的web项目中，如果想添加历史浏览记录，那肯定要用到数据库，但如果直接上手mysql就显得的过于大材小用了，此时redis也就应运而生。不过首先需要介绍一下什么是nosql。&lt;/p&gt;
+&lt;h2 id=&quot;NoSQL介绍&quot;&gt;&lt;a href=&quot;#NoSQL介绍&quot; class=&quot;headerlink&quot; title=&quot;NoSQL介绍&quot;&gt;&lt;/a&gt;NoSQL介绍&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;NoSQL：一类新出现的数据库（not only sql），特点有：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;不支持sql语法&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;存储结构和传统关系型数据库（比如mysql，oracle，sql server）中的关系表不同，nosql中存储的数据都是&lt;strong&gt;K-V&lt;/strong&gt;形式。而Redis 就是一个高性能的key-value数据库。&lt;/li&gt;
+&lt;li&gt;NoSQL的世界里没有一种通用的语言，每种NoSQL数据库都有自己的api和语法，以及擅长的业务场景&lt;/li&gt;
+&lt;li&gt;NoSQL产品种类比如有：&lt;/li&gt;
+&lt;li&gt;&lt;ul&gt;
+&lt;li&gt;Mongodb&lt;/li&gt;
+&lt;li&gt;Redis&lt;/li&gt;
+&lt;li&gt;Hbase hadoop&lt;/li&gt;
+&lt;li&gt;Cassandra hadoop
+    
+    </summary>
+    
+      <category term="redis" scheme="http://yoursite.com/categories/redis/"/>
+    
+    
+      <category term="redis" scheme="http://yoursite.com/tags/redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论-JavaScript、jQuery、AJAX、JSON及四者关系</title>
+    <link href="http://yoursite.com/2018/12/12/%E8%AE%BA-JavaScript%E3%80%81jQuery%E3%80%81AJAX%E3%80%81JSON%E5%8F%8A%E5%9B%9B%E8%80%85%E5%85%B3%E7%B3%BB/"/>
+    <id>http://yoursite.com/2018/12/12/论-JavaScript、jQuery、AJAX、JSON及四者关系/</id>
+    <published>2018-12-12T14:36:53.000Z</published>
+    <updated>2019-11-13T14:49:21.454Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;  在学习前端的过程中，经常被各种各样的语法名词搞混，这里简单归纳下容易混淆的四种名词含义，JavaScript、jQuery、AJAX、JSON 以及这四者之间的关系。&lt;/p&gt;
+&lt;h2 id=&quot;JavaScript&quot;&gt;&lt;a href=&quot;#JavaScript&quot; class=&quot;headerlink&quot; title=&quot;JavaScript&quot;&gt;&lt;/a&gt;JavaScript&lt;/h2&gt;&lt;p&gt;JavaScript（简称js）是一种主要运行于浏览器中的&lt;strong&gt;弱类型的动态脚本语言&lt;/strong&gt;，可以用来实现网页上的一些高级功能，如数据验证处理、页面动态效果、定时任务、与用户交互、发送/接收服务器端数据等等。&lt;/p&gt;
+&lt;p&gt;弱类型指的是js中的变量在参与运算的时候可以根据实际需要动态转换类型。与之相对应的是强类型语言——变量一般不允许自动转换类型（某些强类型语言的字符串连接操作除外），如果参与运算、调用时不符合要求的类型，则会在编译阶段报错，比如说java各种复杂的变量声明。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="web" scheme="http://yoursite.com/categories/web/"/>
+    
+    
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>卸载win10预装</title>
+    <link href="http://yoursite.com/2018/10/13/%E7%AE%80%E5%8D%95%E5%AE%8C%E5%85%A8%E5%88%A0%E9%99%A4%E6%89%80%E6%9C%89win10%E9%A2%84%E8%A3%85%E5%BA%94%E7%94%A8/"/>
+    <id>http://yoursite.com/2018/10/13/简单完全删除所有win10预装应用/</id>
+    <published>2018-10-13T13:36:53.000Z</published>
+    <updated>2018-12-19T14:56:10.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;一行命令删除所有win10预装应用，解决win10烦恼！！&lt;/p&gt;
+&lt;p&gt;方法和步骤：&lt;br&gt;1、搜索栏中输入“PowerShell”，在搜索结果中右键选择“以管理员身份运行”PowerShell。&lt;br&gt;2、在PowerShell窗口中，输入“&lt;code&gt;Get-AppX
+        
+      
+    
+    </summary>
+    
+      <category term="电脑技巧" scheme="http://yoursite.com/categories/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/"/>
+    
+    
+      <category term="win10" scheme="http://yoursite.com/tags/win10/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我的博客之路</title>
+    <link href="http://yoursite.com/2017/12/11/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/"/>
+    <id>http://yoursite.com/2017/12/11/我的博客之路/</id>
+    <published>2017-12-11T13:36:53.000Z</published>
+    <updated>2018-12-19T15:18:14.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;说到博客，仿佛已经是多少年代以前的产物了。但是对于步入互联网行业的我来说，博客似乎占用了生活中很大一部分的，刚开始入门碰到各种各样的问题，百度出来很大一部分都是各个勤劳的博客主解决了问题，这也使得我在成长的道路上遇到各种与我或者我们一起在前行的人们，尽管时过境迁，他们或为销声匿迹或者也开启了自己的博客主之路，在被评论为大神时候，回想起的是当初稚嫩的自己第一次配置好IDE的满足，第一次在教程下print出Hello Word的喜悦，或者是写出第一篇博客的忐忑，以及无人问津的失落。&lt;/p&gt;
+&lt;p&gt;说起我为什么开始写博客，当时只是因为在同学的一句话下便萌生了写博客的心思，因为我也是一个喜欢折腾的人，那时候左思右想是在CSDN写好呢还是在博客园写下第一篇历史性的Hello。
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="起点" scheme="http://yoursite.com/tags/%E8%B5%B7%E7%82%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>刚开始的一小步</title>
+    <link href="http://yoursite.com/2017/12/10/%E5%88%9A%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%80%E5%B0%8F%E6%AD%A5/"/>
+    <id>http://yoursite.com/2017/12/10/刚开始的一小步/</id>
+    <published>2017-12-10T13:36:53.000Z</published>
+    <updated>2018-12-19T14:40:30.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;如往常一样，这只是一生中一样普通的一天。&lt;br&gt;                    –欢迎来到博客： &lt;a href=&quot;https://ancientlian.github.io/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="随笔" scheme="http://yoursite.com/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="起点" scheme="http://yoursite.com/tags/%E8%B5%B7%E7%82%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2017/12/10/hello-world/"/>
+    <id>http://yoursite.com/2017/12/10/hello-world/</id>
+    <published>2017-12-10T12:36:53.000Z</published>
+    <updated>2018-12-19T14:40:26.000Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
